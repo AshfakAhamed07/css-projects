@@ -1,0 +1,109 @@
+/* Colors 
+body background: #131417
+tile background: #1e1f26 
+username: #b7bbc8
+card stats background: #131417
+*/
+
+
+html,body{
+    margin: 0;
+    padding: 0;
+    color: var(--username);
+    font-family: var(--font-main);
+}
+
+:root {
+    --font-main: 'Noto Sans', sans-serif;
+    --bg-main: #131417;
+    --bg-card: #1e1f26;
+    --bg-stats: #131417;
+    --username: #b7bbc8;
+}
+
+body{
+    background: var(--bg-main);
+    font-family: var(--font-main);
+}
+p,h3{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    padding-left: 0;
+}
+
+.card{
+    background: var(--bg-card);
+    width: 100%;
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 1em;
+
+}
+
+.card, img{
+    border-radius: 10px;
+}
+
+.card-thumbnail img{
+    max-width: 100%;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body{
+    display: flex;
+    margin-top: 1em;
+}
+
+.card-avatar img{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin-right: 1em;
+
+}
+
+.card-details{
+    color: var(--username);
+    line-height: 1.5;
+}
+
+.card-details h3{
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+.card-details p{
+    font-size: 0.85rem;
+    color: var(--username);
+}
+
+
+.card-interactions{
+    display: none;
+    list-style: none;       
+    margin: 0;
+    padding-bottom: 0.5em;
+   
+}
+
+.card-interactions li{
+    padding: .25em .5em;
+    background: var(--bg-stats);
+    margin-right: .5em;
+    border-radius: 5px;
+   
+}
+.card:hover .card-interactions{
+    display: flex;
+   
+}
+
+.card:hover {
+    padding-bottom: 0;
+}
