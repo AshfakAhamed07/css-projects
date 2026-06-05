@@ -1,0 +1,68 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+}
+
+:root {
+    --font-family: 'Karla', sans-serif;
+    --body-bg: #1E1F25;
+    --btn-bg: #000;
+    --btn-color: #cbcbcb;
+    --btn-color-hover: #fff;
+    --grad-color1: #eeaf61;
+    --grad-color2: #fb9062;
+    --grad-color3: #ee5d6c;
+    --grad-color4: #ce4993;
+    --grad-color5: #6a0d83;
+}
+
+body{
+    background-color: var(--body-bg);
+}
+
+.container{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; 
+}
+
+.button-border{
+    background: linear-gradient(115deg, var(--grad-color1),var(--grad-color2),var(--grad-color3), var(--grad-color4), var( --grad-color5));
+    padding: 2px;
+}
+
+.button{
+    font-family: inherit;
+    font-size: 36px;
+    padding: 1em 1.5em;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: var(--btn-bg);
+    color:var(--btn-color);
+    border: none;
+    letter-spacing: 0.1em;
+
+    /* Another technique for the border color change but border-radius can't be changed in this. */
+    /* border-image:  linear-gradient(#222222, #222222) padding-box, 
+    linear-gradient(115deg, var(--grad-color1),var(--grad-color2),var(--grad-color3), var(--grad-color4), var( --grad-color5)); 
+       border-image-slice:1;
+    */
+
+    transition: transform 0.2s ease;
+}
+
+.button-border:hover{
+    /* background: linear-gradient(115deg, var(--grad-color5),var(--grad-color4),var(--grad-color3), var(--grad-color2), var( --grad-color1)); */
+    background: linear-gradient(230deg, var(--grad-color1),var(--grad-color2),var(--grad-color3), var(--grad-color4), var( --grad-color5));
+    padding: 2px;
+}
+
+.button-border:hover .button{
+    cursor: pointer;
+    color: var(--btn-color-hover);
+    padding: 1.1em 1.6em ;
+    /* transform: scale(1.05); */
+}
+
