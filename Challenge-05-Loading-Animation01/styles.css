@@ -1,0 +1,78 @@
+:root{
+    --bg-color:#FFF;
+    --animation-color1:#555555;
+    --animation-color2:#cccccc;
+}
+
+*{
+    box-sizing: border-box;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    
+    
+}
+
+.Loading-animation-container{
+      display: flex;
+      flex-direction: row;
+      gap: 12px; 
+      align-items: center;
+      justify-content: center;
+      height:100vh;
+
+}
+
+.Loading-animation-element{
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    /* animation: pulse 1.5s infinite ease-in-out both; */
+    animation: pulse 1s infinite alternate;
+     
+}
+
+.Loading-animation-element:nth-child(1){
+     animation-delay: -0.4s;
+}
+
+.Loading-animation-element:nth-child(2){
+     animation-delay: -0.4s;
+
+}
+
+.Loading-animation-element:nth-child(3){
+     animation-delay: -0.4s;
+
+}
+
+
+@keyframes pulse{
+    from {
+        background-color: var(--animation-color1);
+    }
+
+    to{
+         background-color: var(--animation-color2);
+         height: 1.6em;
+         width: 1.6em;
+    }
+}
+
+/* Another Alternative */
+
+/* @keyframes pulse  {
+   0%,100% {
+    transform: scale(0.7);       
+    background-color: var(--animation-color1);
+   }
+   50% {
+    transform: scale(1);        
+    background-color: var(--animation-color2);
+   }
+} */
+
+
+
