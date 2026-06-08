@@ -1,0 +1,54 @@
+:root{
+    --bg-color:#555555;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);  
+}
+
+.Loading-animation-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.Loading-animation-element {
+    height: 1.5em;
+    width: 1.5em;
+    animation: rotate 1.5s ease-in-out infinite normal;
+    margin: 0.5em;
+    transform:rotate(45deg);
+    
+    
+}
+
+.box-one { 
+    background-color: red;
+}
+
+
+.box-two {
+    background-color: blue;
+}
+.box-three {
+    
+    background-color: gold;
+}
+
+@keyframes rotate{
+    from {
+        transform:rotate(-45deg) ;
+    }
+
+    to{
+         transform: rotate(45deg);
+    }
+}
