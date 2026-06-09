@@ -1,0 +1,54 @@
+:root{
+    --bg-color:#FFF;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    background: var(--bg-color);  
+}
+
+.word-carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+    font-size: 3em;
+    font-weight: 700;
+    flex-direction: column;
+    
+}
+.highlight::after{
+    background-color: blue;
+    color: var(--bg-color);
+    padding: .5em;
+    border-radius: 4px;
+    content: "football";
+    animation: carousel 6s infinite;
+
+}
+
+
+@keyframes carousel{
+
+    0%,100%{
+       content:"football";
+    }
+
+    25%{
+       content:"Coding";
+    }
+
+    50%{
+        content:"Food";
+    }
+
+    75%{
+        content:"Travelling";
+    }
+}
