@@ -1,0 +1,70 @@
+:root{
+    --bg-color:#FFF;
+    --outer-circle-color:black;
+    --circle-2-color:blue;
+    --circle-3-color:red;
+    --circle-4-color:yellow;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    background: var(--bg-color);  
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+    
+}
+
+.outer-circle{
+    height:400px ;
+    width:400px;
+    background-color: var(--outer-circle-color);
+    border-radius: 50%;
+    position: relative;
+}
+.circle-2,.circle-3,.circle-4{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+.circle-2{
+     height:300px ;
+    width:300px;
+    background-color: var(--circle-2-color);   
+}
+
+.circle-3{
+    height:200px ;
+    width:200px;
+    background-color: var(--circle-3-color);
+}
+
+.circle-4{
+    height:100px ;
+    width:100px;
+    background-color: var(--circle-4-color);
+}
+
+/* Another Alternative Way */
+/* If nested hierarchically in HTML, this is all you need for centering! */
+
+/* .outer-circle, .circle-2, .circle-3,.circle-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+} */
+
+
