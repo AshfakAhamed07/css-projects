@@ -1,0 +1,41 @@
+:root{
+    --bg-color:#f0f0f0;
+    --official-germany-black-color: #000000 ;
+    --official-germany-red-color:#DD0000;
+    --official-germany-yellow-color:#FFCE00;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    background: var(--bg-color); 
+    display:flex;
+    justify-content:center;
+    align-items: center;  
+    height: 100vh;
+}
+
+.germany-flag{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    height: 300px;
+    width: 500px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.top-part{
+  background-color: var(--official-germany-black-color);
+}
+
+
+.central-part{
+  background-color: var(--official-germany-red-color);
+}
+
+.bottom-part{
+  background-color: var(--official-germany-yellow-color);
+}
