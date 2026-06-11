@@ -1,0 +1,66 @@
+/* Center the logo on the screen */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Outer black ring with silver border */
+.BMW-logo {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background-color: #000000;
+  border-radius: 50%;
+  border: 4px solid #d5d5d5;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Inner checkered circle wrapper */
+.BMW-logo-inner-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #d5d5d5;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+/* Checkerboard quadrants */
+.BMW-logo-inner-circle-first-quarter,
+.BMW-logo-inner-circle-fourth-quarter {
+  background-color: #ffffff;
+}
+
+.BMW-logo-inner-circle-second-quarter,
+.BMW-logo-inner-circle-third-quarter {
+  background-color: #0066b2; /* Official BMW Blue */
+}
+
+/* Text positioning wrapper */
+.BMW-logo-name {
+  position: absolute;
+  font-weight: 900;
+  font-size: 28px;
+  color: #ffffff;
+  margin: 0;
+  height: 110px; /* Radius from center to text track */
+  transform-origin: bottom center;
+  left: calc(50% - 14px); /* Center the 28px wide text box */
+  top: 15px;
+}
+
+/* Curve the text along the top arc */
+.letter-01 { transform: rotate(-40deg); }
+.letter-02 { transform: rotate(0deg); }
+.letter-03 { transform: rotate(40deg); }
