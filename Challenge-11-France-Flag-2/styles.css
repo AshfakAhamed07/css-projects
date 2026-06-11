@@ -1,0 +1,43 @@
+:root{
+    --bg-color:#f0f0f0;
+    --official-france-blue-color: #002654 ;
+    --official-france-white-color:#FFFFFF;
+    --official-france-Red-color:#ED2939;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    background: var(--bg-color); 
+    display:flex;
+    justify-content:center;
+    align-items: center;  
+    height: 100vh;
+}
+
+.france-flag{
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ height: 400px;
+ width: 600px; 
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+ 
+
+}
+
+.left-part{
+  background-color: var(--official-france-blue-color);
+}
+
+
+.central-part{
+  background-color: var(--official-france-white-color);
+}
+
+.right-part{
+  background-color: var(--official-france-Red-color);
+}
