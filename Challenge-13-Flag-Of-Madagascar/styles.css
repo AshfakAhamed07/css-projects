@@ -1,0 +1,46 @@
+:root{
+    --bg-color:#f0f0f0;
+    --official-madagascar-white-color: #FFFFFF ;
+    --official-madagascar-red-color:#F9423A;
+    --official-madagascar-green-color:#00843D;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    background: var(--bg-color); 
+    display:flex;
+    justify-content:center;
+    align-items: center;  
+    height: 100vh;
+}
+
+.madagascar-flag{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+    'white-part red-part'
+    'white-part green-part';
+    height: 400px;
+    width: 600px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.white-part{
+   background-color: var(--official-madagascar-white-color);
+   grid-area: white-part;
+}
+.red-part{
+  background-color: var(--official-madagascar-red-color);
+  grid-area:red-part ;
+}
+
+.green-part{
+  background-color: var(--official-madagascar-green-color);
+  grid-area: green-part;
+}
