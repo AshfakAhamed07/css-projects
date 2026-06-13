@@ -1,0 +1,53 @@
+:root{
+    --bg-color:#f0f0f0;
+    --official-madagascar-white-color: #FFFFFF ;
+    --official-swiss-red-color:#FF0000;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    background: var(--bg-color); 
+    display:flex;
+    justify-content:center;
+    align-items: center;  
+    height: 100vh;
+}
+
+/* The flag must be a perfect square */
+.switzerland-flag{
+    height: 600px;
+    width: 600px;
+    background-color: var(--official-swiss-red-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Base styles for the white cross */
+.vertical-part,.horizontal-part{
+    position: absolute;
+    background-color: var(--official-madagascar-white-color); 
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    
+}
+
+/* The vertical bar of the cross */
+.vertical-part{
+  height:300px;
+  width: 100px;
+}
+
+/* The horizontal bar of the cross */
+.horizontal-part{
+   height:100px;
+   width: 300px; 
+}
